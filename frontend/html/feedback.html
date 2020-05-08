@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Feedback</title>
+        <link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,600&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/3a2473e05e.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../css/feedback.css" type="text/css">
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+
+        <div id="topBar">
+            <div id="backButton">
+                <p id="arrowButton"><i class="fas fa-arrow-left" style="font-size: 50px; color: white; cursor: pointer;"></i></p>
+            </div>
+            <h1>EasyDo</h1>
+        </div>
+        
+        <div id="content">
+            <p id="emailTag">Email</p>
+            <input id="email" type="text">
+            <p id="feedbackTag">Feedback</p>
+            <textarea id="feedback" cols="50" rows="10"></textarea><br>
+            <p id="success_message"></p>
+            <button id="submit">Submit Feedback</button>
+        </div>
+
+        <script src="../javascript/feedback.js"></script>
+    </body>
+</html>

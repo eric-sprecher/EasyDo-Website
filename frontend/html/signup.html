@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EasyDo</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/login.css">
+        <link rel="stylesheet" href="../css/signup.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://kit.fontawesome.com/3a2473e05e.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="root">
+
+            <div id="backButton">
+                <a href="/"><i class='fas fa-arrow-left'></i> Back To Login</a>
+            </div>
+
+            <div id="content">
+                <h1>EasyDo</h1>
+                
+                <div id="input">
+                    <p id="usernameTag">Username</p>
+                    <input type="text" id="username">
+                    <p id="passwordTag">Password</p>
+                    <input type="password" id="password">
+                    <p id="confirmPasswordTag">Confirm Password</p>
+                    <input type="password" id="confirmPassword">
+                    <p id="greetNameTag">Greeting Name</p>
+                    <input type="text" id="greetName">
+
+                    <p id="error_message"></p>
+                    <button id="submitButton">Create Account</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="../javascript/signup.js"></script>
+    </body>
+</html>

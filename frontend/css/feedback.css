@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(180deg, #85D8CE 0%, #085078 100%);
+
+    display: grid;
+    grid-template-columns: 15% auto 15%;
+    grid-template-rows: 100px auto 300px;
+    grid-template-areas: 
+                'title title title'
+                '. content .'
+                '. . .';
+}
+
+#topBar{
+    grid-area: title;
+
+    display: grid;
+    grid-template-columns: 15% auto 15%;
+    grid-template-areas: 'back title .';
+}
+
+#topBar #backButton{
+    grid-area: back;
+    margin-top: 40px;
+    margin-left: 20%;
+}
+
+#topBar h1{
+    grid-area: title;
+    text-align: center;
+
+    font-family: 'Oleo Script', cursive;
+    font-size: 110px;
+    color: white;
+}
+
+#content{
+    grid-area: content;
+    margin: auto;
+}
+
+#content #emailTag{
+    margin-top: 90px;
+}
+
+#content #feedback{
+    margin-bottom: 25px;
+    resize: none;
+
+    border: none;
+    border-radius: 7px;
+    opacity: 0.6;
+
+    text-indent: 7px;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: 'Roboto Slab', serif;
+}
+
+#content p{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: white;
+
+    margin-bottom: 10px;
+}
+
+#content input{
+    width: 270px;
+    height: 27px;
+    margin-bottom: 30px;
+
+    border: none;
+    border-radius: 7px;
+    opacity: 0.6;
+
+    text-indent: 7px;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: 'Roboto Slab', serif;
+}
+
+#content button{
+    height: 50px;
+    width: 150px;
+
+    border: none;
+    border-radius: 7px;
+
+    font-family: 'Roboto Slab', serif;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 750px){
+    body{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #topBar{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

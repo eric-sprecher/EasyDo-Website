@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body, html{
+    padding: 0;
+}
+
+#root{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(180deg, #85D8CE 0%, #085078 100%);
+    background-attachment: fixed;
+
+    display: grid;
+    grid-template-columns: 20% auto 20%;
+    grid-template-rows: 20% auto 100px 20%;
+    grid-template-areas:
+                "back title ."
+                ". main ."
+                ". . .";
+}
+
+#root #title{
+    grid-area: title;
+    text-align: center;
+}
+
+#root #backButton{
+    grid-area: back;
+    margin-left: 25px;
+}
+
+#root #backButton i{
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+#root #title h1{
+    font-family: 'Oleo Script', cursive;
+    font-size: 110px;
+    color: white;
+}
+
+#root #content{
+    grid-area: main;
+}
+
+#root #content h1{
+    font-family: 'Oleo Script', cursive;
+    font-size: 60px;
+    color: white;
+
+    margin-bottom: 35px;
+}
+
+#root #content p{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 600;
+    font-size: 22px;
+
+    text-indent: 27px;
+}
+
+#root #content #contact,
+#root #content #feedbackButton{
+    color: white;
+    text-indent: 0;
+    margin-bottom: 15px;
+}
+
+#root #content #feedbackButton{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 750px){
+    #root #title h1{
+        font-size: 70px;
+    }
+
+    #root #content h1{
+        font-size: 35px;
+    }
+
+    #root #content p{
+        font-weight: 600;
+        font-size: 16px;
+    
+        text-indent: 27px;
+    }
+
+    #root #backButton i{
+        font-size: 10px;
+
+        margin-top: 27px;
+        margin-left: 8px;
+    }
+
+    #root #backButton{
+        font-size: 10px;
+    }
+}

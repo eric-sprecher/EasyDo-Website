@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: linear-gradient(180deg, #85D8CE 0%, #085078 100%);
+    width: 100vw;
+    height: 100vh;
+}
+
+#root{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 15% auto 15%;
+    grid-template-rows: 20% auto 10%;
+    grid-template-areas:
+            ". . ."
+            ". main ."
+            "log log log";
+}
+
+#content{
+    grid-area: main;
+    text-align: center;
+}
+
+#content h1{
+    margin-bottom: 65px;
+    font-family: 'Oleo Script', cursive;
+    font-size: 110px;
+    color: white;
+}
+/*These are the p elements above the input bars. I had to split the emailTag and passwordTag slightly 
+because the margin-right values have to be different for alignment*/
+#content #usernameTag, #passwordTag, #confirmPasswordTag, #greetNameTag{
+    margin-bottom: 10px;
+
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+}
+
+#content #usernameTag{
+    margin-right: 175px;
+}
+
+#content #passwordTag{
+    margin-right: 175px;
+}
+
+#content #confirmPasswordTag{
+    margin-right: 100px;
+}
+
+#content #greetNameTag{
+    margin-right: 130px;
+}
+
+#content #warningTag{
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+/******************************************************/
+
+#content input{
+    width: 270px;
+    height: 27px;
+    margin-bottom: 30px;
+
+    border: none;
+    border-radius: 7px;
+    opacity: 0.6;
+
+    text-indent: 7px;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: 'Roboto Slab', serif;
+}
+/*These are the buttons that appear at the bottom of the page*/
+#options{
+    grid-area: log;
+    display: grid;
+    grid-template-columns: 50%;
+    grid-template-areas: 
+                "login signup";
+    
+    text-align: center;
+
+    border-top: 2px solid white;
+}
+
+#options #login{
+    grid-area: login;
+    border-right: 1px solid white;
+}
+
+#options #login:hover{
+    background-color: rgba(47, 116, 153, 0.705);
+}
+
+#options #signup{
+    grid-area: signup;
+}
+
+#options #signup:hover{
+    background-color: rgba(47, 116, 153, 0.705);
+}
+
+#options #signup, #login{
+    padding-top: 35px;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 750px){
+
+    #root{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

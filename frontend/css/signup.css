@@ -1,0 +1,57 @@
+#root{
+    grid-template-columns: 15% auto 15%;
+    grid-template-rows: 20% auto 10%;
+    grid-template-areas:
+            "back . ."
+            ". main ."
+            "log log log";
+}
+
+#backButton{
+    grid-area: back;
+}
+
+#backButton a{
+    position: absolute;
+    top: 75px;
+    left: 100px;
+
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Roboto Slab', serif;
+    text-decoration: none;
+    color: white;
+}
+
+#backButton a:hover{
+    color: #085078;
+}
+
+#content h1{
+    margin-bottom: 30px;
+}
+
+#content input{
+    margin-bottom: 20px;
+    outline: none;
+}
+
+#content #warningTag{
+    margin-bottom: 20px;
+}
+
+#content button{
+    width: 125px;
+    height: 35px;
+
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Roboto Slab', serif;
+    opacity: 0.8;
+
+    cursor: pointer;
+    outline: none;
+}

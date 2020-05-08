@@ -1,0 +1,190 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+#root{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 15% auto 15%;
+    grid-template-rows: 90px  100px 50px auto 10%;
+    grid-template-areas:
+            "top top top"
+            ". inputBox ."
+            ". dateBox ."
+            ". main ."
+            "log log log"; 
+}
+
+/*Top Bar Items*/
+
+#topBar{
+    grid-area: top;
+
+    display: grid;
+    grid-template-columns: 20% auto 20%;
+    grid-template-areas: "icon title info";
+
+    background: linear-gradient(270deg, #85D8CE 0%, #085078 100%);
+}
+
+#topBar #signOut{
+    cursor: pointer;
+}
+
+#topBar #title{
+    grid-area: title;
+    margin-top: 10px;
+
+    text-align: center;
+    font-family: 'Oleo Script', cursive;
+    font-size: 50px;
+    color: white;
+}
+
+#topBar #info{
+    grid-area: info;
+
+    text-align: right;
+    margin-top: 25px;
+    margin-right: 10%;
+    cursor: pointer;
+}
+
+/*Styles for the addBar input and button*/
+
+#addBar{
+    grid-area: inputBox;
+
+    text-align: center;
+}
+
+#addBar input{
+    width: 400px;
+    height: 35px;
+    margin-top: 50px;
+
+    background-color: rgba(194, 194, 194, 0.747);
+    border: none;
+    border-radius: 7px;
+
+    text-indent: 10px;
+    font-size: 20px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 600;
+
+    vertical-align: middle;
+
+    outline: none;
+}
+
+
+#addBar button{
+    height: 35px;
+    width: 35px;
+    margin-top: 50px;
+
+    background-color: #085078;
+    border: none;
+    border-radius: 7px;
+
+    font-size: 35px;
+    text-align: center;
+    color: #85D8CE;
+
+    vertical-align: middle;
+
+    cursor: pointer;
+    outline: none;
+}
+
+/*DateBox input*/
+
+#dateBox{
+    grid-area: dateBox;
+    text-align: center;
+
+    font-family: 'Roboto Slab', serif;
+}
+
+#dateBox #months{
+    margin-top: 10px;
+    margin-right: 50px;
+    width: 100px;
+}
+
+#dateBox #day{
+    margin-top: 10px;
+    margin-right: 30px;
+    width: 70px;
+}
+
+#dateBox p{
+    margin-top: 10px;
+}
+
+/*Main content and the list items*/
+
+#content{
+    grid-area: main;
+}
+
+#content #list{
+    margin-top: 75px;
+    margin-left: 20%;
+}
+
+#content #list li{
+    list-style-type: none;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 600;
+    font-size: 20px;
+    
+    margin-bottom: 10px;
+}
+
+#content #list button{
+    height: 25px;
+    width: 25px;
+    margin-right: 15px;
+    margin-left: 40px;
+
+    border: none;
+    border-radius: 13px;
+    /*background-color: rgba(196, 196, 196, 0.6);*/
+    color: #085078;
+    background-color: #85D8CE;
+
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+}
+
+#content #list h1{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 600;
+    color: #085078;
+
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 750px){
+    #content #list{
+        margin-top: 75px;
+        margin-left: 0;
+    }
+
+    #root{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #content #list li{
+        font-size: 13px;
+    }
+}
